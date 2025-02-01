@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:avalonia_test.ViewModels"
+        xmlns:views="using:avalonia_test.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="avalonia_test.Views.MainWindow"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="PreferSystemChrome"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="RgCompare">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <Label HorizontalAlignment="Center">RgCompare</Label>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button>Compare</Button>
+        </StackPanel>
+
+        <Border BorderThickness="3" BorderBrush="Silver">
+            <Grid ColumnDefinitions="*,2,*">
+                <views:LiveDatasource Grid.Column="0" />
+                <Border Grid.Column="1" Background="LightGray" Width="2"></Border>
+                <views:LiveDatasource Grid.Column="2" />
+            </Grid>
+        </Border>
+    </DockPanel>
+</Window>
