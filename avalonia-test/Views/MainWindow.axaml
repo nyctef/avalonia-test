@@ -17,14 +17,14 @@
         </StackPanel>
 
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" FlowDirection="RightToLeft">
-            <Button>Compare</Button>
+            <Button Click="CompareButton_OnClick">Compare</Button>
         </StackPanel>
 
         <Border BorderThickness="3" BorderBrush="Silver">
             <Grid ColumnDefinitions="*,2,*">
-                <views:LiveDatasource Grid.Column="0" />
+                <views:LiveDatasourceView Grid.Column="0" DataContext="{Binding SourceDatasource}" />
                 <Border Grid.Column="1" Background="LightGray" Width="2"></Border>
-                <views:LiveDatasource Grid.Column="2" />
+                <views:LiveDatasourceView Grid.Column="2" DataContext="{Binding TargetDatasource}" />
             </Grid>
         </Border>
     </DockPanel>

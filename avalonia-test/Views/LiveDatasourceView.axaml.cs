@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace avalonia_test.Views;
 
-public partial class LiveDatasource : UserControl
+public partial class LiveDatasourceView : UserControl
 {
-    public LiveDatasource()
+    public LiveDatasourceView()
     {
         InitializeComponent();
     }
