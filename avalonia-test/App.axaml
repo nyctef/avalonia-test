@@ -1,15 +1,20 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
              x:Class="avalonia_test.App"
-             xmlns:local="using:avalonia_test"
-             RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+             xmlns:local="using:avalonia_test">
 
     <Application.DataTemplates>
-        <local:ViewLocator/>
+        <local:ViewLocator />
     </Application.DataTemplates>
-  
+
     <Application.Styles>
-        <FluentTheme />
+        <!--
+        todo:
+          - choose dark or light theme based on current system setting
+          - use honeycomb colors
+        https://github.com/AvaloniaCommunity/Material.Avalonia/wiki/Advanced-Theming
+        -->
+        <themes:MaterialTheme BaseTheme="Dark" PrimaryColor="Blue" SecondaryColor="Red" />
     </Application.Styles>
 </Application>
